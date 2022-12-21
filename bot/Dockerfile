@@ -1,4 +1,8 @@
-FROM python:3-onbuild
+FROM python:latest
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+COPY requirements.txt ./
+COPY bot.py ./
+RUN pip3 install -r requirements.txt
 EXPOSE 8888
-RUN pip install -r requirements.txt
-CMD ["python", "bot.py"]
+CMD ["python3", "bot.py"]

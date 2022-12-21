@@ -1,4 +1,0 @@
-service:
-  bot:
-    build: bot/
-    command: python3 bot/bot.py
